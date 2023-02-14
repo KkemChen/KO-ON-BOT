@@ -1,33 +1,98 @@
-* KO-ON Bot
-A Music Player For kookapp.cn
-** Use Docker Image
-#+BEGIN_SRC bash
-docker pull qihaoran/ko-on-bot
-#+END_SRC
-** With Codes
-*** Download
-#+BEGIN_SRC bash
-git clone git@github.com:Gunale0926/KO-ON-Bot.git --recursive
-python3 -m pip install -r KO-ON-Bot/requirements.txt
-#+END_SRC
-*** Config
-1. Rename ~config.tmp.json~ to ~config.json~
-2. Fill Keywords with value
-   - ~token*~: KOOK Bot token for bot *
-   - ~default_platform*~ (Optional): Default Platform for Bot *
-   - ~n_*~: configs for Netease Music
-   - ~b_*~: configs for Bilibili
-   - ~qq_enable~: ~1~ or ~0~
-   - ~q_*~: configs for QQ Music
-   - ~schedule_*~: configs for scheduler(refer to the template)
-*** Run the BOT
-**** Windows
-#+BEGIN_SRC bash
-start /main run.bat
-#+END_SRC
-**** macOS
-#+BEGIN_SRC bash
-sh run.sh
-#+END_SRC
-**** Linux
-https://github.com/Gunale0926/KO-ON-Bot/issues/19#issue-1517067767
+# KO-ON Bot
+
+
+
+搬运于https://github.com/Gunale0926/KO-ON-Bot 的仓库，对部分bug进行修复，完善文档。
+
+
+
+## Windows部署
+
+1. 直接下载Release版本的Win_with_environment.zip并解压
+2. 修改`config.json`文件,完善各平台cookie(可选)，默认网易云平台可不用修改
+   - `token*`: KOOK Bot token for bot *
+   - `default_platform*` (Optional): Default Platform for Bot *
+   - `n_*`: configs for Netease Music
+   - `b_*`: configs for Bilibili
+   - `qq_enable`: ~1~ or ~0~
+   - `q_*`: configs for QQ Music
+   - `schedule_*`: configs for scheduler(refer to the template)
+
+3. 启动
+
+```shell
+./run.bat
+```
+
+---
+
+
+
+## Linux下部署
+
+Linux下部署，各系统具体基础环境有差异，这里以阿里云centos7.9为例。
+
+#### 前置环境
+
+1. 安装Python3.10、nodejs、pip、yarn等前置环境
+
+   ```shell
+   yum install -y python3.10
+   yum install -y pip
+   yum install -y nodejs
+   
+    curl -sL https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
+    
+    yum install -y yarn
+   ```
+
+2. 手动编译安装FFmpeg、libopus、libzmq（ffmpeg库不自带opus编码器和zmq，需手动编译安装）
+
+   * libops 
+
+     ```shell
+     wget https://archive.mozilla.org/pub/opus/opus-1.3.1.tar.gz
+          
+        tar xzvf opus-1.3.1.tar.gz  
+        
+        cd opus-1.3.1  
+        
+        ./configure  
+        
+        make && make install  
+     ```
+
+   * libzmq
+
+     ```shell
+     wget https://github.com/zeromq/libzmq/releases/download/v4.3.4/zeromq-4.3.4.tar.gz
+     
+       tar xzvf zeromq-4.3.4.tar.gz
+       
+       cd zeromq-4.3.4
+       
+       ./configure
+       
+       make && make install
+     ```
+
+   * ffmpeg
+
+     ```shell
+     wget http://www.ffmpeg.org/releases/ffmpeg-4.3.2.tar.gz
+     
+         tar -xvf ffmpeg-4.3.2.tar.gz
+     
+         cd ffmpeg-4.3.2/
+     
+         ./configure --enable-libopus --enable-libzmq
+     
+         make && make install
+     ```
+
+
+
+#### 启动
+
+1. 修改`config.json`文件,完善各平台cookie(可选)，默认网易云平台可不用修改
+2. 启动`./run.sh`
