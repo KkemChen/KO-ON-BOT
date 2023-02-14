@@ -1,0 +1,14 @@
+{
+    "token1": "1/MTExNDc=/abcbcbcbcbcbcbcbc==",
+    "default_platform1": "网易",
+    "q_id": "",
+    "n_phone": "",
+    "n_passwd": "",
+    "n_cookie": "",
+    "q_cookie": "",
+    "b_cookie": "",
+    "qq_enable": "1",
+    "schedule_server_address": "http://127.0.0.1",
+    "schedule_server_port":"41541",
+    "schedule_server_path":"/scheduler"
+  }
