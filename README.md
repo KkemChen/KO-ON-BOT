@@ -109,3 +109,9 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 
 1. 修改`config.json`文件,完善各平台cookie(可选)，默认网易云平台可不用修改
 2. 启动`./run.sh`
+
+
+---
+备注：
+1. 如出现`ERROR: opus not found using pkg-config`的报错，输入`PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"`然后再继续。
+
