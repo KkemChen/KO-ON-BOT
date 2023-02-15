@@ -90,6 +90,19 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
          make && make install
      ```
 
+   * 下载咪咕、QQ音乐、网易云所需环境
+   切换到对应的目录`NeteaseCloudMusicApi`   `QQMusicApi`  ` MiguMusicApi`,执行`yarn install`
+
+     ```shell
+     cd NeteaseCloudMusicApi
+     yarn install
+     
+     cd QQMusicApi
+     yarn install
+     
+     cd MiguMusicApi
+     yarn install
+     ```
 
 
 #### 启动
