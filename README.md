@@ -100,6 +100,9 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
    切换到对应的目录`NeteaseCloudMusicApi`   `QQMusicApi`  ` MiguMusicApi`,执行`yarn install`
 
      ```shell
+     cd KO-ON-BOT
+     python3 -m pip install -r requirements.txt
+    
      cd NeteaseCloudMusicApi
      yarn install
      
