@@ -48,6 +48,8 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
     curl -sL https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
     
     yum install -y yarn
+    
+    yum install -y screen
    ```
 
 2. 手动编译安装FFmpeg、libopus、libzmq（ffmpeg库不自带opus编码器和zmq，需手动编译安装）
