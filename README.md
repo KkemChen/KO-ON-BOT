@@ -41,8 +41,8 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 >       https://blog.csdn.net/bai920708/article/details/127659568
 
    ```shell
-   yum install -y python3.10  
-   yum install -y pip
+   yum install -y python3.10  //此处若出错，看上面👆
+  
    yum install -y nodejs
    
     curl -sL https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
