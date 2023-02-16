@@ -36,8 +36,10 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 
 1. 安装Python3.10、nodejs、pip、yarn等前置环境
 
+> 必须安装3.10版本，如未能成功安装，请自行搜索安装python3.10 可参考 https://zhuanlan.zhihu.com/p/564555473
+
    ```shell
-   yum install -y python3.10  //必须安装3.10版本，如未能成功安装，请自行搜索安装python3.10 可参考 https://zhuanlan.zhihu.com/p/564555473
+   yum install -y python3.10  
    yum install -y pip
    yum install -y nodejs
    
