@@ -128,7 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 bot31.py
-config.json
 ffmpeg.exe
 31channelidcache
 31msgidcache
