@@ -127,4 +127,5 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 ---
 备注：
 1. 如出现`ERROR: opus not found using pkg-config`的报错，输入`export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/usr/local/lib/pkgconfig"`然后再继续。
+2. 如出现`nasm/yasm not found or too old`的报错，输入`yum -y install nasm`然后再继续。
 
