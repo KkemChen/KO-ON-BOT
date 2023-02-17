@@ -100,8 +100,12 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 
      ```shell
      cd KO-ON-BOT
-     python3 -m pip install -r requirements.txt
-    
+     python3 -m pip install -r requirements.txt  //该步骤若有警告或报错，尝试指定镜像源👇，如下
+     ```
+     > `python3 -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt`
+     
+     
+     ```shell
      cd NeteaseCloudMusicApi
      yarn install
      
