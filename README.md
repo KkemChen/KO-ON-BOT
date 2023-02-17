@@ -128,4 +128,7 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 备注：
 1. 如出现`ERROR: opus not found using pkg-config`的报错，输入`export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/usr/local/lib/pkgconfig"`然后再继续。
 2. 如出现`nasm/yasm not found or too old`的报错，输入`yum -y install nasm`然后再继续。
+3. 运行core.py点歌中可能会出现`ffmpeg: error while loading shared libraries: libzmq.so.5: cannot open shared object file: No such file or directory`的报错，可以采用以下方法解决
+   > 在 /etc/ld.so.conf.d/ 目录中创建一个`libzmq.conf`文件，文件内容添加`/usr/local/lib`;
+   > 保存后输入`sudo ldconfig`更新库缓存
 
