@@ -90,7 +90,7 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
      
          cd ffmpeg-4.3.2/
      
-         ./configure --enable-libopus --enable-libzmq
+         ./configure --enable-libopus --enable-libzmq  //此步报错看最下面备注
      
          make && make install
      ```
