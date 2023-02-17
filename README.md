@@ -14,7 +14,7 @@
    - `default_platform*` (Optional): Default Platform for Bot *
    - `n_*`: configs for Netease Music
    - `b_*`: configs for Bilibili
-   - `qq_enable`: ~1~ or ~0~
+   - `qq_enable`: 1 or 0
    - `q_*`: configs for QQ Music
    - `schedule_*`: configs for scheduler(refer to the template)
 
