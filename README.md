@@ -98,6 +98,7 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
    * 下载该项目
 
      ```shell
+     git clone https://github.com/qq704361748/KO-ON-BOT.git
      cd KO-ON-BOT
      python3 -m pip install -r requirements.txt  //该步骤若有警告或报错，尝试指定镜像源👇，如下
      ```
