@@ -24,13 +24,13 @@
 
 ## 环境要求
 
-需要 NodeJS 8.12+ 环境
+需要 NodeJS 12+ 环境
 
 ## 安装
 
 ```shell
-$ git clone git@github.com:Binaryify/NeteaseCloudMusicApi.git 
-
+$ git clone git@github.com:Binaryify/NeteaseCloudMusicApi.git
+$ cd NeteaseCloudMusicApi
 $ npm install
 ```
 
@@ -38,7 +38,7 @@ $ npm install
 
 ```shell
 $ git clone https://github.com/Binaryify/NeteaseCloudMusicApi.git
-
+$ cd NeteaseCloudMusicApi
 $ npm install
 ```
 
@@ -73,6 +73,22 @@ v4.0.8 加入了 Vercel 配置文件,可以直接在 Vercel 下部署了,不需�
 4. 点击 `PERSONAL ACCOUNT` 的 `select`
 5. 直接点`Continue`
 6. `PROJECT NAME`自己填,`FRAMEWORK PRESET` 选 `Other` 然后直接点 `Deploy` 接着等部署完成即可  
+
+## 腾讯云 serverless 部署
+因 `Vercel` 在国内访问太慢,在此提供腾讯云 serverless 部署方法(注意:腾讯云 serverless 并不是免费的,前三个月有免费额度,之后收费)
+### 操作方法
+1. fork 此项目
+2. 在腾讯云serverless应用管理页面( https://console.cloud.tencent.com/sls ),点击`新建应用`
+3. 顶部`创建方式`选择 `Web 应用`
+4. 选择 `Express框架`,点击底部`下一步按钮`
+5. 输入`应用名`,上传方式选择`代码仓库`,进行GitHub授权(如已授权可跳过这一步),代码仓库选择刚刚fork的项目
+6. 启动文件填入:
+```
+#!/bin/bash
+export PORT=9000
+/var/lang/node16/bin/node app.js
+``` 
+7. 点击`完成`,等待部署完成,点击`资源列表`的 `API网关` 里的 `URL`,正常情况会打开文档地址,点击文档`例子`可查看接口调用效果
 
 ## 可以在Node.js调用
 

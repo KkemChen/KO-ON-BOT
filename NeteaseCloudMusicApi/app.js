@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-const generateConfig = require('./generateConfig')
 async function start() {
-  await generateConfig()
+  // 如果需要手动修改anonymous_token，需要注释generateConfig调用
   require('./server').serveNcmApi({
     checkVersion: true,
   })
