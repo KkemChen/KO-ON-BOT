@@ -90,7 +90,7 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
      
          cd ffmpeg-4.3.2/
      
-         ./configure --enable-libopus --enable-libzmq
+         ./configure --enable-libopus --enable-libzmq  //此步报错看最下面备注
      
          make && make install
      ```
@@ -104,7 +104,7 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
      ```
      > `python3 -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt`
      
-     * 下载咪咕、QQ音乐、网易云所需环境切换到对应的目录`NeteaseCloudMusicApi`   `QQMusicApi`  ` MiguMusicApi`,执行`yarn install`
+    * 下载咪咕、QQ音乐、网易云所需环境切换到对应的目录`NeteaseCloudMusicApi`   `QQMusicApi`  ` MiguMusicApi`,执行`yarn install`
      
      ```shell
      cd NeteaseCloudMusicApi
@@ -127,4 +127,5 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
 ---
 备注：
 1. 如出现`ERROR: opus not found using pkg-config`的报错，输入`export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"/usr/local/lib/pkgconfig"`然后再继续。
+2. 如出现`nasm/yasm not found or too old`的报错，输入`yum -y install nasm`然后再继续。
 
