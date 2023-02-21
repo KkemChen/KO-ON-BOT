@@ -104,7 +104,7 @@ Linux下部署，各系统具体基础环境有差异，这里以阿里云centos
      ```
      > `python3 -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple`
      
-    * 下载咪咕、QQ音乐、网易云所需环境切换到对应的目录`NeteaseCloudMusicApi`   `QQMusicApi`  ` MiguMusicApi`,执行`yarn install`
+    * 下载咪咕、QQ音乐、网易云所需环境，切换到对应的目录`NeteaseCloudMusicApi`   `QQMusicApi`  ` MiguMusicApi`,执行`yarn install`
      
      ```shell
      cd NeteaseCloudMusicApi
